@@ -1,0 +1,12 @@
+Windows Object Library Framework (WOLF)
+
+Back when I was a poor student in 1994, I would do some Windows development
+now and then.  I had seen a couple of books for Borland's OWL and wished I
+had had the money to buy it.
+
+Instead, I started writing my own framework that used the same funky
+"sort-of like a pure virtual function" declaration syntax that Borland used
+after I reverse-engineered how they did it.
+
+I even used this framework to create a level editor for the MUD I played at
+the time.

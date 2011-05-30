@@ -1,0 +1,26 @@
+THE WINDOWS OBJECT LIBRARY FRAMEWORK
+
+FURTHER WOLF DEVELOPMENT
+- consider adding code to use notification routines in TOOLHELP.DLL.  You only have to
+  write minimal debugging code, and it will also take care of possible errors that
+  happen in Windows code.
+- for the final compilation:
+	- use IMPDEF to make the export list for the DEF file.  This way, if
+	  you add functions to WOLF, old apps will work with the new DLL,
+	  since the old apps will call functions by the original export 
+	  ordinal number.  New functions (of course) will have different
+	  ordinal numbers.
+	- optimize for speed
+	- in all constructors, all data members are initialized to either zero or
+	  their value from their constructor's parameter list or to a default value
+	- all dynamically allocated WOLF objects are deleted under all circumstances
+	- all window properties set by WOLF are removed
+	- no code will cause exceptions as long as valid values are used
+	  (i.e. the WOLF code works, but the data you are giving it causes an
+	  exception.)
+	- compile with Standard Stack Frame off
+- additional classes:
+	- TPrint:  class to make printing painless
+	- OLE/DDE
+	- TGDI:  class to make GDI easier and more powerful
+
